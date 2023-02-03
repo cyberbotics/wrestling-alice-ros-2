@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<robot name="Nao">
+    <webots>
+        <!-- Plugin that declare the main Webots controller (gives access to the Webots API trough WebotsNode.robot) -->
+        <plugin type="participant.nao_controller.NaoDriver" />
+        <!-- Custom topic for the accelerometer and the gyro -->
+        <plugin type="webots_ros2_driver::Ros2IMU">
+            <!-- Set the topic name.  -->
+            <topicName>/IMU</topicName>
+            <!-- If `True`, the device topics will constantly publish, which can slow down the simulation. -->
+            <!-- By default the topics are publishing only if there is at least one subscriber for the corresponding topic. -->
+            <alwaysOn>False</alwaysOn>
+            <!-- Indicates the name of the gyro device. -->
+            <gyroName>gyro</gyroName>
+            <!-- Indicates the name of the accelerometer device. -->
+            <accelerometerName>accelerometer</accelerometerName>
+        </plugin>
+        <!-- For more information, check out this link: https://github.com/cyberbotics/webots_ros2/wiki/References-Devices -->
+    </webots>
+</robot>
