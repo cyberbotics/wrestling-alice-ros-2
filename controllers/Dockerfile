@@ -1,6 +1,6 @@
-FROM eprosima/vulcanexus:humble-simulation
 # This ros 2 controller package was built using the image eprosima/vulcanexus:humble-desktop
 # We use the humble-simulation image because it is lighter and we don't need building tools anymore
+FROM eprosima/vulcanexus:humble-simulation
 
 # Fix needed until vulcanexus uses webots-ros2 version 2023.0.1
 ENV LD_LIBRARY_PATH=/opt/ros/humble/lib/controller:$LD_LIBRARY_PATH

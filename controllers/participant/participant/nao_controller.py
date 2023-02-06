@@ -18,7 +18,9 @@ class NaoDriver:
         self.__node = rclpy.create_node('nao_driver')
 
     def step(self):
+        # Mandatory function to go to the next simulation step
         rclpy.spin_once(self.__node, timeout_sec=0)
+
         if self.__robot.getTime() % 2 < 1:
             self.__RShoulderRoll.setPosition(0)
         else:
