@@ -10,7 +10,7 @@ WORKDIR /usr/local/webots-project/controllers/participant
 RUN mkdir -p /usr/local/webots-project/controllers
 COPY . /usr/local/webots-project/controllers
 
-# eprosima/vulcanexus:humble-simulation image does not have colcon installed
+# The eprosima/vulcanexus:humble-simulation Docker image does not have colcon installed
 # We install it and build the participant package
 RUN apt-get update && \
     apt-get install -y python3-colcon-common-extensions && \
