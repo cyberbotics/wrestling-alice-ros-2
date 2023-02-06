@@ -1,2 +1,5 @@
 .vscode
 controllers/motions/.~lock*
+controllers/builder/
+controllers/Build_Dockerfile
+*.pyc

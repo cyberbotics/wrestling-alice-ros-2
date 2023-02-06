@@ -13,7 +13,7 @@ def generate_launch_description():
         package='webots_ros2_driver',
         executable='driver',
         output='screen',
-        additional_env={'WEBOTS_CONTROLLER_URL': 'tcp://localhost:1234/participant'},
+        additional_env={'WEBOTS_CONTROLLER_URL': os.environ['WEBOTS_CONTROLLER_URL']},
         parameters=[
             {'robot_description': robot_description},
         ]
