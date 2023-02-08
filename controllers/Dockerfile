@@ -1,9 +1,6 @@
 # We use the eprosima/vulcanexus:humble-simulation image because it is light
 FROM eprosima/vulcanexus:humble-simulation
 
-# Fix needed until vulcanexus uses webots-ros2 version 2023.0.1
-ENV LD_LIBRARY_PATH=/opt/ros/humble/lib/controller:$LD_LIBRARY_PATH
-
 WORKDIR /usr/local/webots-project/controllers/participant
 
 # Copies all the files of the controllers folder into the docker container
@@ -14,6 +11,7 @@ COPY . /usr/local/webots-project/controllers
 # We install it and build the participant package
 RUN apt-get update && \
     apt-get install -y python3-colcon-common-extensions && \
+    rm -rf /var/lib/apt/lists/* && \
     colcon build
 
 # Environment variable needed to connect to Webots instance
