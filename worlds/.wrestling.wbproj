@@ -5,7 +5,7 @@ sceneTreePerspectives: 000000ff000000010000000300000018000000c0000000fc010000000
 maximizedDockId: -1
 centralWidgetVisible: 1
 orthographicViewHeight: 1
-textFiles: 0 "controllers/participant/participant.py"
+textFiles: -1
 consoles: Console:wrestling referee:All
 consoles: Console:wrestler red:All
 consoles: Console:wrestler blue:All
