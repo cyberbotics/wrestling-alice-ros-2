@@ -8,7 +8,7 @@ orthographicViewHeight: 1
 textFiles: -1
 consoles: Console:wrestling referee:All
 consoles: Console:wrestler red:All
-consoles: Console:wrestler blue:All
+consoles: Console:All:All
 renderingDevicePerspectives: wreslter red:CameraBottom;1;1;0;0
 renderingDevicePerspectives: wreslter red:CameraTop;1;1;0;0
 renderingDevicePerspectives: wrestler blue:CameraBottom;1;1;0;0
