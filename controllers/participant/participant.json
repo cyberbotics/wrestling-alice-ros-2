@@ -1,5 +1,6 @@
 {
   "name": "Alice (ROS 2)",
   "description": "Minimalist ROS 2 controller example for the Robot Wrestling Tournament.",
-  "country": "demo"
+  "country": "demo",
+  "programming": "ROS 2"
 }
