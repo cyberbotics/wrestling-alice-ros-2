@@ -98,6 +98,6 @@ ENV WEBOTS_CONTROLLER_URL=${WEBOTS_CONTROLLER_URL}
 CMD . /opt/ros/humble/setup.sh && . /usr/local/webots-project/controllers/participant/install/setup.sh && ros2 launch participant robot_launch.py
 ```
 
-[Bob](https://github.com/cyberbotics/wrestling-bob) is a more advanced robot controller able to win against Alice.
+[Bob](https://github.com/cyberbotics/wrestling-bob-ros-2) is a more advanced ROS 2 robot controller able to win against Alice.
 
 [1]: https://webots.cloud/run?version=R2022b&url=https%3A%2F%2Fgithub.com%2Fcyberbotics%2Fwrestling%2Fblob%2Fmain%2Fworlds%2Fwrestling.wbt&type=competition "Leaderboard"
