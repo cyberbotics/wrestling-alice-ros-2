@@ -7,6 +7,7 @@ from ament_index_python.packages import get_package_prefix
 os.environ['WEBOTS_HOME'] = get_package_prefix('webots_ros2_driver')
 from controller import Motion
 
+
 class NaoDriver:
     def init(self, webots_node, properties):
         # we play on loop the HandWave motion

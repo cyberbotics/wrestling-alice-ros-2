@@ -1,5 +1,4 @@
 .vscode
-controllers/motions/.~lock*
 *.pyc
 controllers/participant/build/*
 controllers/participant/install/*
