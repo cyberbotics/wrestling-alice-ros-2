@@ -710,7 +710,6 @@ PROTO Nao [
         lookupTable [
           -8.726 -8.726 0.01, 8.726 8.726 0.01
         ]
-        zAxis FALSE
       }
       DEF US1 Transform {
         translation 0.0537 -0.0341 0.0698
@@ -744,7 +743,7 @@ PROTO Nao [
           0.25 0.25 0, 2.55 2.55 0
         ]
         type "sonar"
-        numberOfRays 6
+        numberOfRays 18
         aperture 1.04
       }
       DEF US3 Transform {
@@ -765,7 +764,7 @@ PROTO Nao [
           0.25 0.25 0, 2.55 2.55 0
         ]
         type "sonar"
-        numberOfRays 6
+        numberOfRays 18
         aperture 1.04
       }
       DEF HeadYaw Hinge2Joint {
@@ -4104,6 +4103,10 @@ PROTO Nao [
                                                 }
                                               ]
                                             }
+                                            physics Physics {
+                                              density -1
+                                              mass 0.0001
+                                            }
                                             lookupTable [
                                             ]
                                           }
@@ -4132,6 +4135,10 @@ PROTO Nao [
                                               }
                                             }
                                             boundingObject USE BUMPER_BO
+                                            physics Physics {
+                                              density -1
+                                              mass 0.0001
+                                            }
                                             lookupTable [
                                             ]
                                           }
@@ -5623,6 +5630,10 @@ PROTO Nao [
                                               }
                                             }
                                             boundingObject USE BUMPER_BO
+                                            physics Physics {
+                                              density -1
+                                              mass 0.0001
+                                            }
                                             lookupTable [
                                             ]
                                           }
@@ -5651,6 +5662,10 @@ PROTO Nao [
                                               }
                                             }
                                             boundingObject USE BUMPER_BO
+                                            physics Physics {
+                                              density -1
+                                              mass 0.0001
+                                            }
                                             lookupTable [
                                             ]
                                           }
