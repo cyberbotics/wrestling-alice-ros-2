@@ -1,5 +1,11 @@
 # Humanoid Robot Wrestling Controller Example
 
+## ⚠️ WARNING ⚠️
+
+The current Vulcanexus images used in this example are based on Webots R2023a and hence won't work with the current version of the IROS competition.
+Please wait until Vulcanexus integrates Webots R2023b (which should happen soon) before you can participate in the competition with a ROS 2 controller.
+Alternatively, you can build your own ROS 2 + Webots R2023b docker image and use it.
+
 [![webots.cloud - Competition](https://img.shields.io/badge/webots.cloud-Competition-007ACC)][1]
 
 ## Alice ROS 2 controller
