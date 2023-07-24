@@ -1,6 +1,6 @@
 # We use the eprosima/vulcanexus:humble-simulation image because it is light
 # It has ROS2 and webots_ros2 installed
-FROM eprosima/vulcanexus:humble-simulation-2.1.1
+FROM eprosima/vulcanexus:iron-simulation-3.0.0
 
 WORKDIR /usr/local/webots-project/controllers/participant
 
