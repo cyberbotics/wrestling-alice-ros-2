@@ -77,7 +77,7 @@ Here is the [Dockerfile](./controllers/Dockerfile) used by the controller:
 ``` Dockerfile
 # We use the eprosima/vulcanexus:humble-simulation image because it is light
 # It has ROS2 and webots_ros2 installed
-FROM eprosima/vulcanexus:humble-simulation-2.1.1
+FROM eprosima/vulcanexus:iron-simulation-3.0.0
 
 WORKDIR /usr/local/webots-project/controllers/participant
 
@@ -102,4 +102,4 @@ CMD . /opt/ros/humble/setup.sh && . /usr/local/webots-project/controllers/partic
 
 [Bob](https://github.com/cyberbotics/wrestling-bob-ros-2) is a more advanced ROS 2 robot controller able to win against Alice.
 
-[1]: https://webots.cloud/run?version=R2022b&url=https%3A%2F%2Fgithub.com%2Fcyberbotics%2Fwrestling%2Fblob%2Fmain%2Fworlds%2Fwrestling.wbt&type=competition "Leaderboard"
+[1]: https://webots.cloud/run?version=R2022b&url=https://github.com/cyberbotics/wrestling/blob/main/worlds/wrestling.wbt&type=competition "Leaderboard"
