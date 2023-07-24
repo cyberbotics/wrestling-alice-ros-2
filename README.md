@@ -2,8 +2,7 @@
 
 ## ⚠️ WARNING ⚠️
 
-The current Vulcanexus images used in this example are based on Webots R2023a and hence won't work with the current version of the IROS competition.
-Please wait until Vulcanexus integrates Webots R2023b (which should happen soon) before you can participate in the competition with a ROS 2 controller.
+This sample repository is still untested.
 Alternatively, you can build your own ROS 2 + Webots R2023b docker image and use it.
 
 [![webots.cloud - Competition](https://img.shields.io/badge/webots.cloud-Competition-007ACC)][1]
@@ -13,7 +12,7 @@ Alternatively, you can build your own ROS 2 + Webots R2023b docker image and use
 Minimalist ROS 2 package controller example for the [Humanoid Robot Wrestling Competition](https://github.com/cyberbotics/wrestling).
 This basic package control motors using the Webots API provided by the [webots_ros2_driver](https://github.com/cyberbotics/webots_ros2/tree/master/webots_ros2_driver) package. An example `/IMU` topic has been implemented in [webots_controller.urdf](./controllers/participant/resource/webots_controller.urdf) following [this guide](https://github.com/cyberbotics/webots_ros2/wiki/References-Devices).
 
-The Docker image used in the competition is a lightweight humble image that does not have colcon installed so we pre-build the package using the [build_controller.sh](./controllers/build_controller.sh) script.
+The Docker image used in the competition is a lightweight iron image that does not have colcon installed so we pre-build the package using the [build_controller.sh](./controllers/build_controller.sh) script.
 
 Here is the [nao_controller.py](./controllers/participant/participant/nao_controller.py) file using Webots' [Robot API](https://cyberbotics.com/doc/reference/robot):
 
@@ -75,7 +74,7 @@ def generate_launch_description():
 Here is the [Dockerfile](./controllers/Dockerfile) used by the controller:
 
 ``` Dockerfile
-# We use the eprosima/vulcanexus:humble-simulation image because it is light
+# We use the eprosima/vulcanexus:iron-simulation image because it is light
 # It has ROS2 and webots_ros2 installed
 FROM eprosima/vulcanexus:iron-simulation-3.0.0
 
@@ -85,7 +84,7 @@ WORKDIR /usr/local/webots-project/controllers/participant
 RUN mkdir -p /usr/local/webots-project/controllers
 COPY . /usr/local/webots-project/controllers
 
-# The eprosima/vulcanexus:humble-simulation Docker image does not have colcon installed
+# The eprosima/vulcanexus:iron-simulation Docker image does not have colcon installed
 # We install it and build the participant package
 RUN apt-get update && \
     apt-get install -y python3-colcon-common-extensions && \
@@ -96,8 +95,8 @@ RUN apt-get update && \
 ARG WEBOTS_CONTROLLER_URL
 ENV WEBOTS_CONTROLLER_URL=${WEBOTS_CONTROLLER_URL}
 
-# Source the ROS humble setup file and run the participant package
-CMD . /opt/ros/humble/setup.sh && . /usr/local/webots-project/controllers/participant/install/setup.sh && ros2 launch participant robot_launch.py
+# Source the ROS iron setup file and run the participant package
+CMD . /opt/ros/iron/setup.sh && . /usr/local/webots-project/controllers/participant/install/setup.sh && ros2 launch participant robot_launch.py
 ```
 
 [Bob](https://github.com/cyberbotics/wrestling-bob-ros-2) is a more advanced ROS 2 robot controller able to win against Alice.
