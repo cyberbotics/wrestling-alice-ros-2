@@ -18,6 +18,7 @@ RUN apt-get update && \
 # Environment variable needed to connect to Webots instance
 ARG WEBOTS_CONTROLLER_URL
 ENV WEBOTS_CONTROLLER_URL=${WEBOTS_CONTROLLER_URL}
+ENV USERNAME=default
 
 # Source the ROS iron setup file and run the participant package
 CMD . /opt/ros/iron/setup.sh && . /usr/local/webots-project/controllers/participant/install/setup.sh && ros2 launch participant robot_launch.py
