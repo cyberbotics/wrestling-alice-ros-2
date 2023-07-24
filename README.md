@@ -1,10 +1,5 @@
 # Humanoid Robot Wrestling Controller Example
 
-## ⚠️ WARNING ⚠️
-
-This sample repository is still untested.
-Alternatively, you can build your own ROS 2 + Webots R2023b docker image and use it.
-
 [![webots.cloud - Competition](https://img.shields.io/badge/webots.cloud-Competition-007ACC)][1]
 
 ## Alice ROS 2 controller
@@ -94,6 +89,7 @@ RUN apt-get update && \
 # Environment variable needed to connect to Webots instance
 ARG WEBOTS_CONTROLLER_URL
 ENV WEBOTS_CONTROLLER_URL=${WEBOTS_CONTROLLER_URL}
+ENV USER=root
 
 # Source the ROS iron setup file and run the participant package
 CMD . /opt/ros/iron/setup.sh && . /usr/local/webots-project/controllers/participant/install/setup.sh && ros2 launch participant robot_launch.py
